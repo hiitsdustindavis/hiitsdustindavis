@@ -31,8 +31,6 @@ header {
   height: 5vh;
   display: flex;
   align-items: center; }
-  .ddlogo:hover path {
-    fill: #F8E71C; }
 
 .nav {
   display: flex;
@@ -41,8 +39,6 @@ header {
   .nav p {
     font-family: "Rubik Bold";
     margin-left: 10%; }
-    .nav p:hover {
-      background: #F8E71C; }
 
 @font-face {
   font-family: "Rubik Bold";
@@ -73,6 +69,12 @@ h4 {
 li {
   font-family: "Franklin Book";
   font-size: 1rem; }
+
+a {
+  text-decoration: underline;
+  padding: 0.3rem;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out; }
 
 section {
   position: relative;
@@ -116,6 +118,17 @@ section {
     line-height: 2rem; }
     .bio h3:last-of-type {
       margin-top: 0.8rem; }
+
+.contact-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 50%;
+  margin-top: 1rem; }
+  .contact-icons .icon-fill {
+    transition: all 0.5s ease-in-out; }
+  .contact-icons:hover svg .icon-fill {
+    fill: #F8E71C; }
 
 .mental-data-lists {
   display: flex;
