@@ -6,7 +6,7 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
-  color: #303030; }
+  color: #000000; }
 
 img {
   width: 100%; }
@@ -14,31 +14,6 @@ img {
 .container {
   width: 80%;
   margin: 0 auto; }
-
-header {
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  align-items: center; }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.ddlogo {
-  width: auto;
-  height: 5vh;
-  display: flex;
-  align-items: center; }
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  width: 70%; }
-  .nav p {
-    font-family: "Rubik Bold";
-    margin-left: 10%; }
 
 @font-face {
   font-family: "Rubik Bold";
@@ -69,12 +44,39 @@ h4 {
 li {
   font-family: "Franklin Book";
   font-size: 1rem; }
+  li a:hover {
+    background: #F8E71C; }
 
 a {
-  text-decoration: underline;
-  padding: 0.3rem;
-  border-radius: 4px;
-  transition: all 0.25s ease-in-out; }
+  transition: all 0.2s ease-in-out; }
+  a:hover {
+    transform: translateY(-0.1rem); }
+
+header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.ddlogo {
+  width: auto;
+  height: 5vh;
+  display: flex;
+  align-items: center; }
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%; }
+  .nav a {
+    margin-left: 10%; }
+    .nav a p {
+      font-family: "Rubik Bold"; }
 
 section {
   position: relative;
@@ -125,10 +127,6 @@ section {
   align-items: flex-end;
   width: 50%;
   margin-top: 1rem; }
-  .contact-icons .icon-fill {
-    transition: all 0.5s ease-in-out; }
-  .contact-icons:hover svg .icon-fill {
-    fill: #F8E71C; }
 
 .mental-data-lists {
   display: flex;
@@ -146,11 +144,14 @@ section {
   .mental-header ul {
     margin-right: 2rem; }
 
-.work img {
+.desktop-mock img {
   margin-bottom: 2rem;
   box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.3); }
-.work h2 {
+.desktop-mock h2 {
   margin-bottom: 1rem; }
+
+.collab img {
+  margin-bottom: 2rem; }
 
 /* Slider */
 .slick-slider {
