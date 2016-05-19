@@ -292,7 +292,7 @@ section {
   z-index: 2; }
 
 .totem {
-  animation: 20s fall 2s infinite;
+  animation: 20s fall infinite;
   position: absolute;
   left: 50vw;
   top: -200px; }
