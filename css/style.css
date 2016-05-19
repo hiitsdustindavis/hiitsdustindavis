@@ -111,12 +111,11 @@ section {
 .profile {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   margin: 4vh auto 8vh auto; }
 
 .headshot {
-  flex-shrink: 0;
   width: 200px;
   height: 200px;
   background-size: contain;
