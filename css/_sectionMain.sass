@@ -1,7 +1,7 @@
 section
   position: relative
   height: 90vh
-  width: 100vw
+  width: 100%
 
 .splash-bg-hi
   position: absolute
@@ -15,17 +15,39 @@ section
 
 .splash-heading
   position: absolute
-  margin-left: 50vw
-  left: -30vw
+  left: 50%
   top: 20vh
+  @media #{$desktop}
+    margin-left: -400px
+  @media #{$tablet}
+    margin-left: -350px
+    h1
+      font-size: 3.45rem
+
 
 //•••••• ABOUT •••••••
+
 .profile
   display: flex
-  align-items: center
-  justify-content: flex-start
+  // align-items: center
+  // justify-content: space-between
   width: 100%
   margin: 4vh auto 8vh auto
+  // border: 1px solid blue
+
+
+.profile-col-left
+  display: flex
+  align-items: center
+  flex-direction: column
+  flex: 1
+  // border: 1px solid green
+
+.profile-col-right
+  display: flex
+  flex-direction: column
+  flex: 2
+  // border: 1px solid magenta
 
 
 .headshot
@@ -33,11 +55,13 @@ section
   height: 200px
   background-size: contain
   background-image: url("../img/dustin_headshot_400x400.jpg")
+  background-repeat: no-repeat
   border-radius: 100%
+  margin-bottom: 1rem
+  // border: 1px solid chartreuse
 
 .bio
-  margin-left: 4vw
-  width: 50vw
+  margin-bottom: 2rem
   h3
     line-height: 2rem
     &:last-of-type
@@ -47,8 +71,12 @@ section
   display: flex
   justify-content: space-between
   align-items: flex-end
-  width: 50%
+  flex-wrap: wrap
+  width: 100px
   margin-top: 1rem
+  // border: 1px solid red
+  svg
+    margin: 5px
 
 .mental-data-lists
   display: flex

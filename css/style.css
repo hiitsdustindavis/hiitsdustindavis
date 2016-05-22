@@ -14,6 +14,12 @@ img {
 .container {
   width: 1024px;
   margin: 0 auto; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      width: 700px; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .container {
+      width: 300px; } }
 
 @font-face {
   font-family: "Rubik Bold";
@@ -91,7 +97,7 @@ header {
 section {
   position: relative;
   height: 90vh;
-  width: 100vw; }
+  width: 100%; }
 
 .splash-bg-hi {
   position: absolute;
@@ -104,27 +110,44 @@ section {
 
 .splash-heading {
   position: absolute;
-  margin-left: 50vw;
-  left: -30vw;
+  left: 50%;
   top: 20vh; }
+  @media (min-width: 1024px) {
+    .splash-heading {
+      margin-left: -400px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .splash-heading {
+      margin-left: -350px; }
+      .splash-heading h1 {
+        font-size: 3.45rem; } }
 
 .profile {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
   margin: 4vh auto 8vh auto; }
+
+.profile-col-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1; }
+
+.profile-col-right {
+  display: flex;
+  flex-direction: column;
+  flex: 2; }
 
 .headshot {
   width: 200px;
   height: 200px;
   background-size: contain;
   background-image: url("../img/dustin_headshot_400x400.jpg");
-  border-radius: 100%; }
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  margin-bottom: 1rem; }
 
 .bio {
-  margin-left: 4vw;
-  width: 50vw; }
+  margin-bottom: 2rem; }
   .bio h3 {
     line-height: 2rem; }
     .bio h3:last-of-type {
@@ -134,8 +157,11 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 50%;
+  flex-wrap: wrap;
+  width: 100px;
   margin-top: 1rem; }
+  .contact-icons svg {
+    margin: 5px; }
 
 .mental-data-lists {
   display: flex;
