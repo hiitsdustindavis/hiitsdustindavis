@@ -63,10 +63,17 @@ a {
     transform: translateY(-0.2rem); }
 
 header {
-  height: 100px;
+  height: 80px;
   width: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  background: white;
+  transition: all 0.3s ease-in-out; }
+
+.hidden {
+  transform: translateY(-100%); }
 
 .navbar {
   display: flex;
