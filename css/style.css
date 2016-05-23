@@ -135,6 +135,14 @@ section {
       margin-left: -350px; }
       .splash-heading h1 {
         font-size: 3.45rem; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .splash-heading {
+      margin-left: -160px; }
+      .splash-heading h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+        top: 20vh; } }
 
 .profile {
   display: flex;
