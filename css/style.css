@@ -25,6 +25,9 @@ img {
     .container {
       width: 100vw; } }
 
+.flex-wrapper {
+  display: flex; }
+
 @font-face {
   font-family: "Rubik Bold";
   src: url("../font/rubik/Rubik-Bold.ttf"); }
@@ -206,6 +209,15 @@ section {
   .mental-header ul {
     margin-right: 2rem; }
 
+.projects-nav {
+  width: 20%;
+  margin-top: 80px; }
+  .projects-nav ul {
+    position: fixed; }
+
+.projects {
+  width: 80%; }
+
 .desktop-mock {
   margin-bottom: 6rem;
   width: 100%; }
@@ -254,9 +266,6 @@ section {
 
 .collab img {
   margin-bottom: 2rem; }
-
-.blog-post-header {
-  width: 100%; }
 
 /* Slider */
 .slick-slider {
