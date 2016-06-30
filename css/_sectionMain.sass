@@ -101,9 +101,17 @@ section
   ul
     position: fixed
     color: red
+  @media #{$tablet}
+    display: none
+  @media #{$mobile}
+    display: none
 
 .projects
   width: 80%
+  @media #{$tablet}
+    width: 100%
+  @media #{$mobile}
+    width: 100%
 
 .desktop-mock
   margin-bottom: 6rem

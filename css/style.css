@@ -222,9 +222,21 @@ section {
   .projects-nav ul {
     position: fixed;
     color: red; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .projects-nav {
+      display: none; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .projects-nav {
+      display: none; } }
 
 .projects {
   width: 80%; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .projects {
+      width: 100%; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .projects {
+      width: 100%; } }
 
 .desktop-mock {
   margin-bottom: 6rem;
