@@ -58,6 +58,10 @@ p {
   font-family: "Franklin Book";
   font-size: 0.9rem; }
 
+strong {
+  font-family: "Rubik Bold";
+  font-size: 0.9rem; }
+
 li {
   font-family: "Franklin Book";
   font-size: 1rem; }
@@ -216,7 +220,8 @@ section {
   width: 20%;
   margin-top: 80px; }
   .projects-nav ul {
-    position: fixed; }
+    position: fixed;
+    color: red; }
 
 .projects {
   width: 80%; }
@@ -229,6 +234,9 @@ section {
     box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.3); }
   .desktop-mock h2 {
     margin-bottom: 1rem; }
+  .desktop-mock p {
+    margin-bottom: 0.8rem;
+    margin: 0 0 0.8rem 1rem; }
 
 .project-header {
   display: flex;
@@ -247,9 +255,7 @@ section {
 
 .project-description {
   width: 60%;
-  margin: 0 1rem; }
-  .project-description p {
-    margin-bottom: 0.8rem; }
+  margin: 0 1rem 0 0; }
 
 .project-util {
   width: 30%;
@@ -269,6 +275,10 @@ section {
 
 .collab img {
   margin-bottom: 2rem; }
+
+#invision-collab {
+  margin-top: -100px;
+  margin-left: calc(50% - 220px); }
 
 /* Slider */
 .slick-slider {

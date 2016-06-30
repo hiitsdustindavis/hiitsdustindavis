@@ -22,7 +22,7 @@ $(window).scroll(function() {
 
   var $picacause = $('#picacause');
   var $windowOfPerception = $('#window');
-  var $benefit = $('#benefit');
+  var $benefit = $('#benefit'); 
   var $collab = $('#collab');
   if (($windowOfPerception.offset().top + $windowOfPerception.height()) < scrollTop + 80) {
     $('#projects-nav-window').css({
