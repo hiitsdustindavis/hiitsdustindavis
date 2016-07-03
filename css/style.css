@@ -64,7 +64,7 @@ strong {
 
 li {
   font-family: "Franklin Book";
-  font-size: 1rem; }
+  font-size: 0.9rem; }
   li a:hover {
     background: #F8E71C; }
 
@@ -162,6 +162,12 @@ section {
   display: flex;
   width: 100%;
   margin: 4vh auto 8vh auto; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .profile {
+      flex-direction: column; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .profile {
+      flex-direction: column; } }
 
 .profile-col-left {
   display: flex;
@@ -182,6 +188,14 @@ section {
   background-repeat: no-repeat;
   border-radius: 100%;
   margin-bottom: 1rem; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .headshot {
+      width: 300px;
+      height: 300px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .headshot {
+      width: 300px;
+      height: 300px; } }
 
 .bio {
   margin-bottom: 2rem; }
@@ -192,24 +206,40 @@ section {
 
 .contact-icons {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   width: 100px;
   margin-top: 1rem; }
   .contact-icons svg {
     margin: 5px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .contact-icons {
+      flex-wrap: nowrap;
+      width: 50%; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .contact-icons {
+      flex-wrap: nowrap;
+      width: 25%; } }
 
 .mental-data-lists {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: 0.5rem auto 0 auto; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .mental-data-lists {
+      flex-direction: column; }
+      .mental-data-lists ul {
+        margin-bottom: 0.5rem; } }
 
 .column-mental {
   display: flex;
   flex-direction: column;
   align-content: space-between; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .column-mental {
+      width: 100%; } }
 
 .mental-header {
   display: flex; }
@@ -222,6 +252,8 @@ section {
   .projects-nav ul {
     position: fixed;
     color: red; }
+    .projects-nav ul li {
+      font-size: 1rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .projects-nav {
       display: none; } }
