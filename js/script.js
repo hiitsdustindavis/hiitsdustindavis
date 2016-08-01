@@ -11,75 +11,45 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
-});
+
 
 var prev = 0;
+var $proj = $('.desktop-mock');
+var $projNav = $('.proj-nav-each');
+var maxCount = $proj.length;
+var scrollTop = $(window).scrollTop();
+var header = $('.header');
+
 $(window).scroll(function() {
-  var header = $('.header');
-  var scrollTop = $(this).scrollTop();
+	scrollTop = $(window).scrollTop();
   header.toggleClass('hidden', scrollTop > prev);
   prev = scrollTop;
+	projNavHighLight();
+});
 
-  var $picacause = $('#picacause');
-  var $windowOfPerception = $('#window');
-  var $benefit = $('#benefit'); 
-  var $collab = $('#collab');
-  if (($windowOfPerception.offset().top + $windowOfPerception.height()) < scrollTop + 80) {
-    $('#projects-nav-window').css({
-      'background-color' : "white"
-    });
-  } else if ($windowOfPerception.offset().top < scrollTop + 80){
-    $('#projects-nav-window').css({
-      'background-color' : "yellow"
-    });
-  } else {
-    $('#projects-nav-window').css({
-      'background-color' : "white"
-    });
-  }
+var projNavHighLight = function() {
+	var pos = 0;
 
-  if (($picacause.offset().top + $picacause.height()) < scrollTop + 80) {
-    $('#projects-nav-picacause').css({
-      'background-color' : "white"
-    });
-  } else if ($picacause.offset().top < scrollTop + 80){
-    $('#projects-nav-picacause').css({
-      'background-color' : "yellow"
-    });
-  } else {
-    $('#projects-nav-picacause').css({
-      'background-color' : "white"
-    });
-  }
+	while (pos < maxCount) {
+		var tempProj = $proj.eq(pos);
+		var tempNav = $projNav.eq(pos);
 
-  if (($benefit.offset().top + $benefit.height()) < scrollTop + 80) {
-    $('#projects-nav-benefit').css({
-      'background-color' : "white"
-    });
-  } else if ($benefit.offset().top < scrollTop + 80){
-    $('#projects-nav-benefit').css({
-      'background-color' : "yellow"
-    });
-  } else {
-    $('#projects-nav-benefit').css({
-      'background-color' : "white"
-    });
-  }
-
-  if (($collab.offset().top + $collab.height()) < scrollTop + 80) {
-    $('#projects-nav-collab').css({
-      'background-color' : "white"
-    });
-  } else if ($collab.offset().top < scrollTop + 80){
-    $('#projects-nav-collab').css({
-      'background-color' : "yellow"
-    });
-  } else {
-    $('#projects-nav-collab').css({
-      'background-color' : "white"
-    });
-  }
-  // console.log(scrollTop + $('.picacause').height());
-  // console.log(scrollTop);
-
+		if ((tempProj.offset().top + tempProj.height()) < scrollTop + 80) {
+			// This is the bottom offset of the project is less than 80px
+			tempNav.css({
+	      'background-color' : "white"
+	    });
+		} else if (tempProj.offset().top < scrollTop + 80){
+			// This is when the top of the project is less that 80px
+	    tempNav.css({
+	      'background-color' : "yellow"
+	    });
+	  } else {
+	    tempNav.css({
+	      'background-color' : "white"
+	    });
+	  }
+		pos++;
+	}
+};
 });
