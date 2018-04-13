@@ -135,7 +135,7 @@ section {
   position: relative;
   height: 80vh;
   width: 100%;
-  margin-top: 120px; }
+  margin-top: 10rem; }
 
 .splash-bg-hi {
   position: absolute;
@@ -147,25 +147,16 @@ section {
   z-index: -10; }
 
 .splash-heading {
-  position: absolute;
-  left: 50%;
-  top: 20vh; }
-  @media (min-width: 1024px) {
-    .splash-heading {
-      margin-left: -400px; } }
+  margin-top: 5rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    .splash-heading {
-      margin-left: -350px; }
-      .splash-heading h1 {
-        font-size: 3.45rem; } }
+    .splash-heading h1 {
+      font-size: 3.45rem; } }
   @media (min-width: 320px) and (max-width: 767px) {
-    .splash-heading {
-      margin-left: -160px; }
-      .splash-heading h1 {
-        font-size: 2.5rem;
-        line-height: 3rem;
-        margin-bottom: 1rem;
-        top: 20vh; } }
+    .splash-heading h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+      top: 20vh; } }
 
 .profile {
   display: flex;
