@@ -77,7 +77,8 @@ a {
   background: #F8E71C; }
 
 header {
-  height: 80px;
+  min-height: 80px;
+  padding: 1rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -100,10 +101,16 @@ header {
 
 .ddlogo {
   width: auto;
-  height: 40px;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   z-index: 10; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .ddlogo {
+      height: 5rem; } }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .ddlogo {
+      height: 5rem; } }
 
 .nav {
   display: flex;
@@ -117,10 +124,12 @@ header {
     .nav a p {
       font-family: "Rubik Bold";
       font-size: 1rem; }
-    @media (min-width: 320px) and (max-width: 767px) {
-      .nav a p {
-        font-family: "Rubik Bold";
-        font-size: 1.5rem; } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .nav a p {
+          font-size: 1.5rem; } }
+      @media (min-width: 320px) and (max-width: 767px) {
+        .nav a p {
+          font-size: 2.5rem; } }
 
 section {
   position: relative;
