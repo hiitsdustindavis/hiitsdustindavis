@@ -5,17 +5,17 @@
 	    var target = this.hash;
 	    var $target = $(target);
 
-			projects.animate({opacity: '0'},500);
+			projects.animate({opacity: '0'},600);
 
 			setTimeout(function(){
 		    $('html, body').stop().animate({
-		        'scrollTop': $target.offset().top - 80
+		        'scrollTop': $target.offset().top
 		    }, 1, 'swing', function () {
 		        window.location.hash = target;
 		    });
-			}, 500);
+			}, 600);
 
-			projects.animate({opacity: '1'},500);
+			projects.animate({opacity: '1'},800);
 
 	});
 
