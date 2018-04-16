@@ -9,11 +9,12 @@
 
 			setTimeout(function(){
 		    $('html, body').stop().animate({
-		        'scrollTop': $target.offset().top - 79
-		    }, 10, 'swing', function () {
+		        'scrollTop': $target.offset().top - 80
+		    }, 1, 'swing', function () {
 		        window.location.hash = target;
 		    });
 			}, 500);
+
 			projects.animate({opacity: '1'},500);
 
 	});
@@ -31,23 +32,11 @@ var target = this.hash;
 
 // Fade to project
 
-	// $projNav.click(function() {
-	// 	var target = this.hash;
-  //   var $target = $(target);
-	// 	event.preventDefault();
-	// 	projects.animate({opacity: '0'},500);
-	// 	$('html, body').stop().animate({
-	// 	        'scrollTop': $target.offset().top - 79
-	// 	    }, 900, 'swing', function () {
-	// 	        window.location.hash = target;
-	// 	    });
-	// 	projects.animate({opacity: '1'},500);
-	// })
 
 // Hide Header on Scroll
 $(window).scroll(function() {
 	scrollTop = $(window).scrollTop();
-  header.toggleClass('hidden', scrollTop > prev);
+  // header.toggleClass('hidden', scrollTop > prev);
   prev = scrollTop;
 	projNavHighLight();
 });

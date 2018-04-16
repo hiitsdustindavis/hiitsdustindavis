@@ -86,7 +86,7 @@ header {
   top: 0;
   background: white;
   transition: all 0.3s ease-in-out;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.3); }
 
 .hidden {
@@ -135,8 +135,12 @@ header {
 section {
   position: relative;
   height: 80vh;
-  width: 100%;
-  padding-top: 10rem; }
+  width: 100%; }
+  .about section {
+    height: auto;
+    margin-top: 8rem; }
+  .home section {
+    padding-top: 8rem; }
 
 .splash-bg-hi {
   position: absolute;
@@ -249,7 +253,7 @@ section {
 
 .projects-nav {
   width: 20%;
-  margin-top: 80px; }
+  margin-top: 8rem; }
   .projects-nav ul {
     position: fixed;
     color: red; }
@@ -272,7 +276,6 @@ section {
       width: 100%; } }
 
 .desktop-mock {
-  margin-bottom: 6rem;
   width: 100%; }
   .desktop-mock img {
     margin-bottom: 2rem;
@@ -285,6 +288,7 @@ section {
 
 .project-header {
   display: flex;
+  padding-top: 8rem;
   width: 100%; }
 
 .project-links {
