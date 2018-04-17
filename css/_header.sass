@@ -10,7 +10,8 @@ header
   transition: all 0.3s ease-in-out
   z-index: 3
   box-shadow: 2px 0px 10px 0px rgba(0,0,0,0.3)
-
+  @media print
+    display: none
 .hidden
   transform: translateY(-100%)
 
@@ -49,3 +50,4 @@ header
       font-size: 2.5rem
     a
       z-index: 10
+      display: block

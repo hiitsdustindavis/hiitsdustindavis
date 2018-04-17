@@ -6,7 +6,8 @@
   margin: 0;
   list-style: none;
   text-decoration: none;
-  color: #000000; }
+  color: #333;
+  font-family: "Franklin Book"; }
 
 html {
   width: 100vw;
@@ -90,6 +91,9 @@ header {
   transition: all 0.3s ease-in-out;
   z-index: 3;
   box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.3); }
+  @media print {
+    header {
+      display: none; } }
 
 .hidden {
   transform: translateY(-100%); }
@@ -132,7 +136,8 @@ header {
       .nav p {
         font-size: 2.5rem; } }
     .nav p a {
-      z-index: 10; }
+      z-index: 10;
+      display: block; }
 
 section {
   position: relative;
@@ -143,6 +148,13 @@ section {
     margin-top: 8rem; }
   .home section {
     padding-top: 8rem; }
+  .cv section {
+    margin-top: 8rem; }
+    @media print {
+      .cv section {
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 100vh; } }
 
 .splash-bg-hi {
   position: absolute;
@@ -317,12 +329,13 @@ section {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     padding: 0.3rem 0.5rem;
-    color: black;
+    color: #333;
     width: 100%;
     text-align: center;
     margin-bottom: 0.8rem; }
   .project-util ul {
-    margin: 0 1rem; }
+    width: 50%;
+    float: left; }
     .project-util ul li {
       margin: 0.3rem 0; }
 
@@ -332,6 +345,32 @@ section {
 #invision-collab {
   margin-top: -100px;
   margin-left: calc(50% - 250px); }
+
+.cv h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: "Rubik";
+  text-transform: lowercase;
+  background: #fcf498;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  margin-left: -0.5rem; }
+.cv ul {
+  margin-bottom: 1.5rem; }
+.cv strong {
+  font-family: "Franklin Demi";
+  padding-bottom: 0.25rem;
+  display: block; }
+.cv .row {
+  display: flex; }
+.cv .col-4 {
+  width: 33%; }
+  .cv .col-4 ul {
+    margin-bottom: 0rem; }
+.cv .col-2 {
+  width: 50%; }
+.cv .ddlogo {
+  width: 100px; }
 
 /* Slider */
 .slick-slider {

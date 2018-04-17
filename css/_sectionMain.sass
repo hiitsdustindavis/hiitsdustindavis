@@ -6,6 +6,12 @@ section
     margin-top: 8rem
   .home &
     padding-top: 8rem
+  .cv &
+    margin-top: 8rem
+    @media print
+      margin-top: 0px
+      padding-top: 0px
+      height: 100vh
   width: 100%
 
 .splash-bg-hi
@@ -167,20 +173,19 @@ section
 
 
 .project-util
-  // border: 6px solid black
-  // border-radius: 8px
   width: 30%
   height: auto
   h4
     border-top: 2px solid black
     border-bottom: 2px solid black
     padding: 0.3rem 0.5rem
-    color: black
+    color: $color_grey_dark
     width: 100%
     text-align: center
     margin-bottom: 0.8rem
   ul
-    margin: 0 1rem
+    width: 50%
+    float: left
     li
       margin: 0.3rem 0
 
@@ -191,3 +196,33 @@ section
 #invision-collab
   margin-top: -100px
   margin-left: calc(50% - 250px)
+
+// -------------------------
+//    CV
+// -------------------------
+.cv
+  h4
+    margin-top: 2rem
+    margin-bottom: 0.75rem
+    font-family: 'Rubik'
+    text-transform: lowercase
+    background: lighten($color-main-yellow, 25%)
+    width: fit-content
+    padding: .25rem 0.5rem
+    margin-left: -.5rem
+  ul
+    margin-bottom: 1.5rem
+  strong
+    font-family: 'Franklin Demi'
+    padding-bottom: 0.25rem
+    display: block
+  .row
+    display: flex
+  .col-4
+    width: 33%
+    ul
+      margin-bottom: 0rem
+  .col-2
+    width: 50%
+  .ddlogo
+    width: 100px
