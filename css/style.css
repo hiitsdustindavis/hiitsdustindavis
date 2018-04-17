@@ -29,6 +29,12 @@ img {
 .flex-wrapper {
   display: flex; }
 
+a.button {
+  padding: 0.35rem 0.6rem;
+  border-radius: 2px;
+  background: #333;
+  color: white; }
+
 @font-face {
   font-family: "Rubik Bold";
   src: url("../font/rubik/Rubik-Bold.ttf"); }
@@ -126,7 +132,6 @@ header {
   height: 100%;
   z-index: 11; }
   .nav p {
-    font-family: "Rubik Bold";
     font-size: 1rem;
     margin-left: 10%; }
     @media (min-width: 768px) and (max-width: 1023px) {
@@ -136,6 +141,7 @@ header {
       .nav p {
         font-size: 2.5rem; } }
     .nav p a {
+      font-family: "Rubik Bold";
       z-index: 10;
       display: block; }
 
@@ -223,23 +229,14 @@ section {
     .bio h3:last-of-type {
       margin-top: 0.8rem; }
 
-.contact-icons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100px;
-  margin-top: 1rem; }
-  .contact-icons svg {
-    margin: 5px; }
-  @media (min-width: 320px) and (max-width: 767px) {
-    .contact-icons {
-      flex-wrap: nowrap;
-      width: 50%; } }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .contact-icons {
-      flex-wrap: nowrap;
-      width: 25%; } }
+.contact-info ul {
+  margin-bottom: 2rem; }
+  .contact-info ul li {
+    margin-bottom: 0.7rem;
+    margin-right: 1rem; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .contact-info ul li {
+        display: inline; } }
 
 .mental-data-lists {
   display: flex;
@@ -363,14 +360,38 @@ section {
   display: block; }
 .cv .row {
   display: flex; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .cv .row {
+      flex-direction: column; } }
+  @media print {
+    .cv .row {
+      flex-direction: row; } }
 .cv .col-4 {
   width: 33%; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .cv .col-4 {
+      margin-bottom: 1rem; } }
   .cv .col-4 ul {
     margin-bottom: 0rem; }
 .cv .col-2 {
   width: 50%; }
 .cv .ddlogo {
   width: 100px; }
+.cv .print-show {
+  display: none; }
+  @media print {
+    .cv .print-show {
+      display: block; } }
+.cv .cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cv a.button.print {
+    display: none; } }
+@media print {
+  .cv a.button.print {
+    display: none; } }
 
 /* Slider */
 .slick-slider {

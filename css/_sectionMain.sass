@@ -79,21 +79,16 @@ section
     &:last-of-type
       margin-top: 0.8rem
 
-.contact-icons
-  display: flex
-  justify-content: space-around
-  align-items: center
-  flex-wrap: wrap
-  width: 100px
-  margin-top: 1rem
-  svg
-    margin: 5px
-  @media #{$mobile}
-    flex-wrap: nowrap
-    width: 50%
-  @media #{$tablet}
-    flex-wrap: nowrap
-    width: 25%
+.contact-info
+  ul
+    margin-bottom: 2rem
+    li
+      margin-bottom: .7rem
+      margin-right: 1rem
+      @media #{$tablet}
+        display: inline
+
+
 
 .mental-data-lists
   display: flex
@@ -218,11 +213,30 @@ section
     display: block
   .row
     display: flex
+    @media #{$mobile}
+      flex-direction: column
+    @media print
+      flex-direction: row
   .col-4
     width: 33%
+    @media #{$mobile}
+      margin-bottom: 1rem
     ul
       margin-bottom: 0rem
   .col-2
     width: 50%
   .ddlogo
     width: 100px
+  .print-show
+    display: none
+    @media print
+      display: block
+  .cv-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+  a.button.print
+    @media #{$tablet}
+      display: none
+    @media print
+      display: none
