@@ -65,6 +65,8 @@ strong {
 li {
   font-family: "Franklin Book";
   font-size: 0.9rem; }
+  li a .active {
+    background: #F8E71C; }
   li a:hover {
     background: #F8E71C; }
 
@@ -119,18 +121,18 @@ header {
   width: 70%;
   height: 100%;
   z-index: 11; }
-  .nav a {
-    margin-left: 10%;
-    z-index: 10; }
-    .nav a p {
-      font-family: "Rubik Bold";
-      font-size: 1rem; }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .nav a p {
-          font-size: 1.5rem; } }
-      @media (min-width: 320px) and (max-width: 767px) {
-        .nav a p {
-          font-size: 2.5rem; } }
+  .nav p {
+    font-family: "Rubik Bold";
+    font-size: 1rem;
+    margin-left: 10%; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .nav p {
+        font-size: 1.5rem; } }
+    @media (min-width: 320px) and (max-width: 767px) {
+      .nav p {
+        font-size: 2.5rem; } }
+    .nav p a {
+      z-index: 10; }
 
 section {
   position: relative;
@@ -255,8 +257,7 @@ section {
   width: 20%;
   margin-top: 8rem; }
   .projects-nav ul {
-    position: fixed;
-    color: red; }
+    position: fixed; }
     .projects-nav ul li {
       font-size: 1rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -297,6 +298,9 @@ section {
   align-items: baseline;
   width: 80px;
   margin-left: 2rem; }
+  .project-links .fa {
+    font-size: 1.5rem;
+    padding-top: 0.25rem; }
 
 .project-details {
   display: flex;

@@ -43,7 +43,7 @@ $(window).scroll(function() {
 
 
 
-var projNavHighLight = function() {
+function projNavHighLight() {
 	var pos = 0;
 
 	while (pos < maxCount) {
@@ -51,19 +51,17 @@ var projNavHighLight = function() {
 		var tempNav = $projNav.eq(pos);
 
 		if ((tempProj.offset().top + tempProj.height()) < scrollTop + 80) {
-			// This is the bottom offset of the project is less than 80px
-			tempNav.css({
-	      'background-color' : "white"
-	    });
+			//Default
+			tempNav.removeClass('active');
+			// tempNav.animate({background:'red'}, 300);
 		} else if (tempProj.offset().top < scrollTop + 80){
-			// This is when the top of the project is less that 80px
-	    tempNav.css({
-	      'background-color' : "yellow"
-	    });
+			//When scroll exceeds height of header
+			tempNav.addClass('active');
+			// tempNav.animate({background:'#F8E71C'}, 300);
+			//Remove class from other nav elements
 	  } else {
-	    tempNav.css({
-	      'background-color' : "white"
-	    });
+			tempNav.removeClass('active');
+			// tempNav.animate({background:'blue'}, 300);
 	  }
 		pos++;
 	}
